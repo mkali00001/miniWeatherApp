@@ -41,8 +41,9 @@ const SearchBox = ({updateInfo}) => {
     setCity("")
     let newInfo = await getWeatherInfo()
     updateInfo(newInfo)
+    setError(false)
     }catch(err){
-      setError("No Such City Found")
+      setError(true)
     }
   }
 
